@@ -1,0 +1,30 @@
+<form class="example-form" [formGroup]="myForm">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Kunal Kr" formControlName="name">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Address</mat-label>
+      <input matInput placeholder="Mumbai..." formControlName="address">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="kunal@gmail.com" formControlName="email">
+    </mat-form-field>
+  
+    <mat-form-field class="example-full-width">
+      <mat-label>Mobile</mat-label>
+      <input matInput placeholder="790XXXXXXXXXX" formControlName="mobile">
+    </mat-form-field>
+  
+
+    <div class="buttons" style="display: flex; justify-content: space-between; margin-top: 16px;">
+        <button mat-raised-button color="primary" (click)="addUser()">
+          {{ isEdit ? 'Update' : 'Save' }}
+        </button>
+        <button mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>
+      </div>
+  </form>
+  
